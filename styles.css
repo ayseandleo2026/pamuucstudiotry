@@ -2884,7 +2884,7 @@ body.modal-open {
 
 @media (max-width: 780px) {
   html {
-    font-size: 80%;
+    font-size: 88%;
   }
 
   :root {
@@ -2981,18 +2981,8 @@ body.modal-open {
     gap: 1.05rem;
   }
 
-  .promo-banner-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.55rem;
-  }
-
-  .promo-banner-copy {
-    row-gap: 0.4rem;
-  }
-
-  .promo-banner-link {
-    width: auto;
+  .promo-banner {
+    display: none;
   }
 
   .merch-showcase-grid,
