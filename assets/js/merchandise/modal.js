@@ -119,11 +119,13 @@ export function createModalController({ body, dom, tools, ui, catalog }) {
                 <span>${tools.escapeHtml(ui.quantity)}</span>
                 <input min="${tools.escapeHtml(String(product.moq))}" name="quantity" step="1" type="number" value="${tools.escapeHtml(String(safeSelection.quantity || product.moq))}"/>
               </label>
-              <div class="merch-detail-total">
-                <span>${tools.escapeHtml(ui.lineEstimate)}</span>
-                <strong data-line-total>${tools.escapeHtml(formatLineTotal(configuredPrice, safeSelection.quantity || product.moq))}</strong>
+              <div class="merch-detail-form-footer">
+                <div class="merch-detail-total">
+                  <span>${tools.escapeHtml(ui.lineEstimate)}</span>
+                  <strong data-line-total>${tools.escapeHtml(formatLineTotal(configuredPrice, safeSelection.quantity || product.moq))}</strong>
+                </div>
+                <button class="button button-primary" type="submit">${tools.escapeHtml(editingKey ? ui.updateLine : ui.detailAdd)}</button>
               </div>
-              <button class="button button-primary" type="submit">${tools.escapeHtml(editingKey ? ui.updateLine : ui.detailAdd)}</button>
             </form>
           </div>
         </div>

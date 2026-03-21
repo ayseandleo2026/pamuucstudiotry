@@ -505,6 +505,7 @@ body[data-page-type="merchandise"] .merch-detail-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
   gap: clamp(1rem, 2vw, 1.6rem);
+  align-items: start;
 }
 
 body[data-page-type="merchandise"] .merch-detail-visual,
@@ -548,8 +549,8 @@ body[data-page-type="merchandise"] .merch-detail-thumb.is-active {
 body[data-page-type="merchandise"] .merch-detail-price-box,
 body[data-page-type="merchandise"] .merch-detail-total {
   display: grid;
-  gap: 0.2rem;
-  padding: 0.95rem 1rem;
+  gap: 0.25rem;
+  padding: 1rem 1.05rem;
   border-radius: var(--radius-lg);
   background: rgba(248, 243, 235, 0.68);
   border: 1px solid rgba(0, 43, 42, 0.08);
@@ -557,7 +558,8 @@ body[data-page-type="merchandise"] .merch-detail-total {
 
 body[data-page-type="merchandise"] .merch-detail-price-box strong,
 body[data-page-type="merchandise"] .merch-detail-total strong {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  line-height: 1.15;
 }
 
 body[data-page-type="merchandise"] .merch-detail-spec-grid {
@@ -583,7 +585,17 @@ body[data-page-type="merchandise"] .merch-detail-swatch-panel h3 {
 
 body[data-page-type="merchandise"] .merch-detail-clusters {
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+body[data-page-type="merchandise"] .merch-detail-clusters > section {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.95rem 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 43, 42, 0.08);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 body[data-page-type="merchandise"] .merch-method-row,
@@ -591,7 +603,7 @@ body[data-page-type="merchandise"] .spec-chip-row,
 body[data-page-type="merchandise"] .merch-swatch-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 body[data-page-type="merchandise"] .merch-method-pill,
@@ -642,12 +654,47 @@ body[data-page-type="merchandise"] .modal-intro {
 body[data-page-type="merchandise"] .merch-detail-form {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  align-items: end;
+  gap: 0.9rem 1rem;
+  align-items: start;
+  padding-top: 0.35rem;
+  border-top: 1px solid rgba(0, 43, 42, 0.08);
+}
+
+body[data-page-type="merchandise"] .merch-detail-form .form-field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+body[data-page-type="merchandise"] .merch-detail-form span {
+  letter-spacing: 0.01em;
+}
+
+body[data-page-type="merchandise"] .merch-detail-form select,
+body[data-page-type="merchandise"] .merch-detail-form input {
+  min-height: 3.2rem;
+  border-radius: 1.05rem;
+  padding-inline: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+body[data-page-type="merchandise"] .merch-detail-form-footer {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 0.95rem;
+  align-items: stretch;
+  padding-top: 0.15rem;
+}
+
+body[data-page-type="merchandise"] .merch-detail-total {
+  align-content: center;
+  min-height: 100%;
 }
 
 body[data-page-type="merchandise"] .merch-detail-form .button {
-  min-height: 3rem;
+  width: 100%;
+  min-height: 3.2rem;
+  justify-content: center;
 }
 
 @media (max-width: 1199px) {
@@ -660,6 +707,10 @@ body[data-page-type="merchandise"] .merch-detail-form .button {
   body[data-page-type="merchandise"] .merch-catalog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  body[data-page-type="merchandise"] .merch-detail-clusters {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
@@ -667,6 +718,7 @@ body[data-page-type="merchandise"] .merch-detail-form .button {
   body[data-page-type="merchandise"] .quote-item-grid,
   body[data-page-type="merchandise"] .merch-detail-spec-grid,
   body[data-page-type="merchandise"] .merch-detail-form,
+  body[data-page-type="merchandise"] .merch-detail-form-footer,
   body[data-page-type="merchandise"] .merch-card-actions,
   body[data-page-type="merchandise"] .merch-catalog-grid {
     grid-template-columns: minmax(0, 1fr);
