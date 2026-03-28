@@ -30,7 +30,7 @@
 <meta name="theme-color" content="#fcf9f3" />
 <meta
   http-equiv="Content-Security-Policy"
-  content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://cdn.shopify.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; form-action https://formspree.io; upgrade-insecure-requests"
+  content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://cdn.shopify.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'{% if page.use_alpine %} 'unsafe-eval'{% endif %} https://cdn.jsdelivr.net https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; form-action https://formspree.io; upgrade-insecure-requests"
 />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -106,7 +106,6 @@
   <script
     defer
     src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.2/dist/cdn.min.js"
-    integrity="sha384-vAaZH8GvWxVAeUkrId2leZTzMdEd6aSfjar0FL2rZh2Ocf5Z81QTnKJMHMpMSFb1"
     crossorigin="anonymous"
   ></script>
 {% endif %}
